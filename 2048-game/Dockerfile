@@ -8,7 +8,7 @@ WORKDIR /usr/share/nginx/html
 COPY . .
 
 # Порты, которые нужно открыть для доступа
-EXPOSE 80
+ EXPOSE 80
 
 # Стартуем Nginx
 CMD ["nginx", "-g", "daemon off;"]
