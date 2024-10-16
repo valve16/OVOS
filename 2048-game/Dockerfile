@@ -1,5 +1,6 @@
 # Используем официальный образ Nginx как базовый образ
-FROM nginx:alpine
+
+FROM nginx:1.27.2-alpine
 
 # Указываем рабочую директорию
 WORKDIR /usr/share/nginx/html
@@ -13,7 +14,7 @@ COPY server.js .
 COPY style.css .
 
 # Порты, которые нужно открыть для доступа
- EXPOSE 80
+EXPOSE 80
 
 # Стартуем Nginx
 CMD ["nginx", "-g", "daemon off;"]
